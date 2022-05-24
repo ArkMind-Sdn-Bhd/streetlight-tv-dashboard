@@ -1,0 +1,258 @@
+body {
+  background-color: black;
+  color: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 98vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.headerContainer {
+  height: 10vh;
+}
+.header {
+  font-size: 24px;
+}
+.headerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+.siteWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*
+*Time
+*/
+.time {
+  text-align: right;
+  margin-right: 10px;
+}
+/*
+*Graph Container
+*/
+.graphContainer {
+  width: 20%;
+  height: 100%;
+  margin: 0 5px;
+  overflow-y: auto;
+  /* padding: 10px 0; */
+}
+/* width */
+.graphContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.graphContainer::-webkit-scrollbar-track {
+  background: #555;
+}
+
+/* Handle */
+.graphContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.graphContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.graphWrapper {
+  padding: 5px;
+  margin: 4px 2px;
+  border-radius: 10px;
+  border: 1px solid rgb(67, 64, 64);
+}
+
+.stats {
+  display: flex;
+}
+.statsWrapper {
+  padding: 5px;
+  border: 1px solid rgb(67, 64, 64);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  /* margin: 10px 3px; */
+  width: 100%;
+  color: rgb(116, 107, 107);
+}
+.statsWrapper h2 {
+  font-size: 14px;
+}
+.statsWrapper h4 {
+  font-size: 20px;
+  margin-top: 5px;
+}
+.carousel-root {
+  height: 100px;
+}
+.sliderContainer {
+  padding: 0;
+}
+.sliderContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+/*
+*Map Container
+*/
+.map {
+  width: 60%;
+  margin: 0 5px;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+.mapLogo {
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  z-index: 100;
+  left: 10px;
+}
+.section {
+  position: absolute;
+  bottom: 95px;
+  background-color: #000;
+  width: 100%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.section span {
+  padding: 2px 0;
+}
+/*
+*Alert Container
+*/
+.alertContainer {
+  width: 20%;
+  margin: 0 5px;
+  height: 100%;
+  overflow-y: auto;
+
+  padding: 10px 0;
+}
+/* width */
+.alertContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.alertContainer::-webkit-scrollbar-track {
+  background: #555;
+}
+
+/* Handle */
+.alertContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.alertContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.alertContainer .alert {
+  display: inline;
+  border: 1px solid cyan;
+  margin-left: 5px;
+  padding: 1px 30px;
+  background-color: rgba(0, 255, 255, 0.5);
+}
+.inner-wrapper {
+  margin: 2px 0;
+  text-align: center;
+}
+.table {
+  /* margin: 6px 0; */
+}
+.h6 {
+  display: inline;
+  /* padding: 4px 25px; */
+  /* margin-bottom: 6px; */
+}
+
+.data {
+  padding: 0px 6px;
+  border-radius: 15px;
+  text-align: center;
+}
+.data span {
+  font-size: 12px;
+}
+.centered {
+  margin: 0 15px;
+}
+.balckout {
+  border: 1px solid rgba(0, 255, 255, 1);
+  background-color: rgba(0, 255, 255, 0.5);
+}
+.back-blackout {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+.phaseout {
+  border: 1px solid rgba(255, 255, 0, 1);
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.back-phaseout {
+  background-color: rgba(255, 255, 0, 0.2);
+}
+
+.majorFault {
+  border: 1px solid rgba(0, 0, 255, 1);
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.back-majorFault {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.minorFault {
+  border: 1px solid rgba(255, 165, 0, 1);
+  background-color: rgba(255, 165, 0, 0.5);
+}
+
+.back-minorFault {
+  background-color: rgba(255, 165, 0, 0.2);
+}
+
+.doorOpen {
+  border: 1px solid rgba(128, 0, 128, 1);
+  background-color: rgba(128, 0, 128, 0.5);
+}
+
+.back-doorOpen {
+  background-color: rgba(128, 0, 128, 0.2);
+}
+
+.daylightOn {
+  border: 1px solid rgba(165, 42, 42, 1);
+  background-color: rgba(165, 42, 42, 0.5);
+}
+.back-daylightOn {
+  background-color: rgba(165, 42, 42, 0.2);
+}
