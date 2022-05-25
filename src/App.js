@@ -17,13 +17,15 @@ function App() {
        */}
       <div className="headerContainer">
         <div className="headerWrapper">
-          <h1 className="header">TECH WON MAJU LED SDN. BHD.</h1>
+          {/*TECH WON MAJU LED SDN. BHD.*/}
+          <h1 className="header"></h1>
         </div>
         <div className="siteWrapper">
-          <h3 className="siteIntegrate">
-            Site Integrated Monitoring System (SIMS)
-          </h3>
-          <h3 className="time">{dateState.toLocaleString()}</h3>
+          {/*Site Integrated Monitoring System (SIMS)*/}
+          <h3 className="siteIntegrate"></h3>
+          <div style={{ marginTop: 30 }}>
+            <h3 className="time">{dateState.toLocaleString()}</h3>
+          </div>
         </div>
       </div>
       {/*

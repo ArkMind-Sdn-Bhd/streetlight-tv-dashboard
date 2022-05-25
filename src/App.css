@@ -12,6 +12,8 @@ body {
   width: 98vw;
   height: 100vh;
   margin: 0 auto;
+  background-image: url("./../public/bg.png");
+  background-color: #cccccc;
 }
 .headerContainer {
   height: 10vh;
@@ -156,8 +158,9 @@ body {
 *Alert Container
 */
 .alertContainer {
-  width: 20%;
-  margin: 0 5px;
+  width: 17%;
+  margin-left: 25px;
+  /*margin: 0 5px;*/
   height: 100%;
   overflow-y: auto;
 
@@ -195,6 +198,7 @@ body {
   text-align: center;
 }
 .table {
+  width: 100%;
   /* margin: 6px 0; */
 }
 .h6 {
@@ -210,9 +214,19 @@ body {
 }
 .data span {
   font-size: 12px;
+  text-align: center;
+}
+.table td {
+  font-size: 12px;
+}
+.table th {
+  font-size: 16px;
 }
 .centered {
-  margin: 0 15px;
+  /* margin: 0 5px; */
+}
+.center-heading {
+  /* margin: 0 15px; */
 }
 .balckout {
   border: 1px solid rgba(0, 255, 255, 1);
@@ -290,7 +304,7 @@ body {
     margin-top: 4px;
     margin-bottom: 15px;
   }
-  .sliderContent p{
+  .sliderContent p {
     margin: 2px;
   }
   .carousel-root {
@@ -299,7 +313,7 @@ body {
   .sliderContent {
     height: 125px;
   }
-  .graphWrapper{
+  .graphWrapper {
     margin-bottom: 15px;
   }
 }
@@ -330,7 +344,7 @@ body {
     margin-top: 4px;
     margin-bottom: 20px;
   }
-  .sliderContent p{
+  .sliderContent p {
     margin: 5px;
   }
   .carousel-root {
@@ -339,10 +353,10 @@ body {
   .sliderContent {
     height: 200px;
   }
-  .barGraph{
+  .barGraph {
     height: 230px;
   }
-  .graphWrapper{
+  .graphWrapper {
     margin-bottom: 15px;
   }
 }
