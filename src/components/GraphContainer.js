@@ -27,11 +27,11 @@ export default function GraphContainer() {
 
       <div className="graphWrapper stats">
         <div className="statsWrapper">
-          <h6>Accumulated Saving</h6>
+          <h6></h6>
           <h1>RM 3733</h1>
         </div>
         <div className="statsWrapper">
-          <h6>Accumulated Carbon Footprint</h6>
+          <h6></h6>
           <h1>974 KG</h1>
         </div>
       </div>
