@@ -25,11 +25,12 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
+      display: false,
       position: "top",
     },
     title: {
       display: true,
-      text: "Chart.js Bar Chart",
+      text: "Monthly Power Consumption",
     },
   },
 };
@@ -44,13 +45,16 @@ const labels = [
   "05/22",
   "04/22",
   "09/22",
+  "10/22",
+  "11/22",
+  "12/22",
 ];
 const data = {
   labels,
   datasets: [
     {
       label: "Monthly Usage",
-      data: [30, 40, 50, 49, 60, 55, 77, 87, 90],
+      data: [30, 40, 50, 49, 60, 55, 77, 87, 90, 77, 87, 90],
       backgroundColor: "#047EDA",
     },
   ],

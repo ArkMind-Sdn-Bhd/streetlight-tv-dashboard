@@ -29,18 +29,19 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
+      display: false,
       position: "top",
     },
   },
 };
 
-const labels = ["11/21", "12/21", "01/22", "02/22", "03/22", "04/22"];
+const labels = ["11/21", "12/21", "01/22", "02/22", "03/22", "04/22", "05/22"];
 const data = {
   labels,
   datasets: [
     {
       label: "Daily Usage",
-      data: [30, 40, 50, 49, 60, 55],
+      data: [30, 40, 50, 49, 60, 55, 53],
       backgroundColor: "rgb(128,0,128)",
     },
   ],

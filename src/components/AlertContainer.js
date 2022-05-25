@@ -4,6 +4,11 @@ export default function AlertContainer() {
   return (
     <div className="alertContainer">
       <h5 className="alert">Alert</h5>
+
+      <br />
+      <br />
+      <br />
+
       {/*
        *Black Out
        */}
@@ -16,14 +21,14 @@ export default function AlertContainer() {
             <span>Time</span>
           </div>
           <div className="data">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
+            <span>Lebuh Keluli</span>
+            <span className="centered">7</span>
+            <span>2022/05/25</span>
           </div>
           <div className="data back-blackout">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
+            <span>Jalan Ungu U9/28B</span>
+            <span className="centered">U9</span>
+            <span>2022/05/23</span>
           </div>
         </div>
       </div>
@@ -40,15 +45,20 @@ export default function AlertContainer() {
             <span>Time</span>
           </div>
           <div className="data">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
+            <span>Jalan Ungu U9/28B</span>
+            <span className="centered">U9</span>
+            <span>2022/05/23</span>
           </div>
-          <div className="data back-phaseout">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
+          {/*<div className="data">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
+          {/*<div className="data back-phaseout">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
         </div>
       </div>
 
@@ -63,16 +73,18 @@ export default function AlertContainer() {
             <span className="centered">Region</span>
             <span>Time</span>
           </div>
-          <div className="data">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
-          <div className="data back-majorFault">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
+          <br />
+          <br />
+          {/*<div className="data">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
+          {/*<div className="data back-majorFault">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
         </div>
       </div>
 
@@ -87,16 +99,18 @@ export default function AlertContainer() {
             <span className="centered">Region</span>
             <span>Time</span>
           </div>
-          <div className="data">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
-          <div className="data back-minorFault">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
+          <br />
+          <br />
+          {/*<div className="data">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
+          {/*<div className="data back-minorFault">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
         </div>
       </div>
 
@@ -111,16 +125,18 @@ export default function AlertContainer() {
             <span className="centered">Region</span>
             <span>Time</span>
           </div>
-          <div className="data">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
-          <div className="data back-doorOpen">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
+          <br />
+          <br />
+          {/*<div className="data">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
+          {/*<div className="data back-doorOpen">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
         </div>
       </div>
 
@@ -135,16 +151,18 @@ export default function AlertContainer() {
             <span className="centered">Region</span>
             <span>Time</span>
           </div>
-          <div className="data">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
-          <div className="data back-daylightOn">
-            <span>XXXXXXXXXX</span>
-            <span className="centered">U1</span>
-            <span>2020/05/10</span>
-          </div>
+          <br />
+          <br />
+          {/*<div className="data">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
+          {/*<div className="data back-daylightOn">*/}
+          {/*  <span>XXXXXXXXXX</span>*/}
+          {/*  <span className="centered">U1</span>*/}
+          {/*  <span>2020/05/10</span>*/}
+          {/*</div>*/}
         </div>
       </div>
     </div>

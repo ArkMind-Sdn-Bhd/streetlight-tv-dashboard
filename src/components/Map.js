@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Map, { Marker, Popup, Source, Layer } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import mapboxgl from "mapbox-gl";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -107,7 +108,7 @@ export default function Maps() {
   };
   return (
     <div className="map">
-      <img className="mapLogo" src="./mapLogo.png" alt="map-logo" />
+      <img className="mapLogo" src="https://streetlight-tv-dashboard.web.app/maplogo.png" alt="map-logo" />
       <Map
         style={{ width: "100%", height: "90%" }}
         mapStyle="mapbox://styles/mapbox/dark-v9"
