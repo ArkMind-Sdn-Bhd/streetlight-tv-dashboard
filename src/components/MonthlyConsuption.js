@@ -59,7 +59,7 @@ const data = {
 export default function MonthlyConsuption() {
   return (
     <div>
-      <Bar options={options} height={200} data={data} />
+      <Bar  options={options} height={200} data={data} />
     </div>
   );
 }

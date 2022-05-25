@@ -51,7 +51,7 @@ export default function TotalConsumptionGraph() {
     <>
       <p>Accumulated Total Power Consumption</p>
       <h3 style={{ textAlign: "right" }}>0 KWh</h3>
-      <Bar height={150} options={options} data={data} />
+      <Bar  height={150} options={options} data={data} />
     </>
   );
 }

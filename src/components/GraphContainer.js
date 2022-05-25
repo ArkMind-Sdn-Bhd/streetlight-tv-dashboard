@@ -30,19 +30,30 @@ export default function GraphContainer() {
       </div>
 
       <div className="graphWrapper sliderContainer">
-        <Carousel showIndicators={false} showStatus={false} showArrows={true}>
+        <Carousel showThumbs={false} showIndicators={false} showStatus={false} showArrows={true}>
           <div className="sliderContent">
-            {/* <img src={""} /> */}
-            <p>Slide 1</p>
+            <div>
+              <h2>Section 9</h2>
+              <p>⚡7,332.24 KWh</p>
+              <p>💭5152.66 KG</p>
+              <p>💵RM 1,452.12</p>
+            </div>
           </div>
           <div className="sliderContent">
-            {/* <img src={""} /> */}
-            <p>Slide 2</p>
+            <div>
+              <h2>Section 10</h2>
+              <p>⚡3,445.24 KWh</p>
+              <p>💭6552.66 KG</p>
+              <p>💵RM 1,752.12</p>
+            </div>
           </div>
           <div className="sliderContent">
-            {/* <img src={""} /> */}
-
-            <p>Slide 3</p>
+            <div>
+              <h2>Section 10</h2>
+              <p>⚡2,122.24 KWh</p>
+              <p>💭9122.77 KG</p>
+              <p>💵RM 1,000.12</p>
+            </div>
           </div>
         </Carousel>
       </div>

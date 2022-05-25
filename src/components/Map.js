@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Map, { Marker, Popup, Source, Layer } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import mapboxgl from "mapbox-gl";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -79,9 +78,9 @@ export default function Maps() {
     longitude: 101.494498,
     latitude: 3.062946,
     zoom: 12,
-    center: true,
   });
 
+  useEffect(() => {}, []);
   /*
    *Handle State of Popup on CLick
    */
@@ -97,6 +96,14 @@ export default function Maps() {
       type: "LineString",
       coordinates: boundaryCordinates,
     },
+  };
+
+  const clickHandle = (longitude, latitude, zoom) => {
+    setViewState({
+      latitude,
+      longitude,
+      zoom,
+    });
   };
   return (
     <div className="map">
@@ -199,13 +206,102 @@ export default function Maps() {
        *Bottom Section
        */}
       <div className="section">
-        <span>Section 1</span>
-        <span>Section 2</span>
-        <span>Section 3</span>
-        <span>Section 4</span>
-        <span>Section 5</span>
-        <span>Section 6</span>
-        <span>Section 7</span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.502439, 3.07072, 15);
+          }}
+        >
+          U1
+        </span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.497847, 3.073034, 15);
+          }}
+        >
+          U2
+        </span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.496743, 3.101665, 15);
+          }}
+        >
+          U3
+        </span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.515162, 3.064845, 15);
+          }}
+        >
+          U4
+        </span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.484847, 3.017062, 15);
+          }}
+        >
+          U5
+        </span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.454443, 3.023346, 15);
+          }}
+        >
+          U6
+        </span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.438356, 3.032051, 15);
+          }}
+        >
+          U7
+        </span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.436395, 3.044693, 15);
+          }}
+        >
+          U8
+        </span>
+        <span
+          className="mapBtns"
+          onClick={() => {
+            clickHandle(101.44218, 3.056652, 15);
+          }}
+        >
+          U9
+        </span>
+        <span
+          className="mapBtns mapBtnsLg"
+          onClick={() => {
+            clickHandle(101.427206, 3.045428, 15);
+          }}
+        >
+          U10
+        </span>
+        <span
+          className="mapBtns mapBtnsLg"
+          onClick={() => {
+            clickHandle(101.421547, 3.040072, 15);
+          }}
+        >
+          U11
+        </span>
+        <span
+          className="mapBtns mapBtnsLg"
+          onClick={() => {
+            clickHandle(101.494498, 3.062946, 12);
+          }}
+        >
+          ALL
+        </span>
       </div>
     </div>
   );
