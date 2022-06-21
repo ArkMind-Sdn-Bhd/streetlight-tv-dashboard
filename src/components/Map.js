@@ -187,6 +187,20 @@ const CITIES = [
     line2: "Section U9",
     line3: "Feeder Pillar 007"
   },
+
+  {
+    latitude: 3.081299,
+    longitude: 101.527674,
+    line2: "Section 9",
+    line3: "Feeder Pillar 051"
+  },
+  {
+    latitude: 3.090524,
+    longitude: 101.498705,
+    line1: "Jalan Mendapan 8/21",
+    line2: "Section 8",
+    line3: "Feeder Pillar 037"
+  },
 ];
 
 /*
@@ -229,7 +243,11 @@ export default function Maps() {
     zoom: 12,
   });
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    setInterval(() => {
+      window.location.reload();
+    }, 600000)
+  }, []);
   /*
    *Handle State of Popup on CLick
    */
