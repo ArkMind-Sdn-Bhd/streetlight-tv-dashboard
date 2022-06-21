@@ -36,25 +36,25 @@ const options = {
 };
 
 const labels = [
-  "11/21",
-  "12/21",
-  "01/22",
-  "02/22",
-  "03/22",
-  "04/22",
-  "05/22",
-  "04/22",
-  "09/22",
-  "10/22",
-  "11/22",
-  "12/22",
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+    "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
 ];
 const data = {
   labels,
   datasets: [
     {
       label: "Monthly Usage",
-      data: [30, 40, 50, 49, 60, 55, 77, 87, 90, 77, 87, 90],
+      data: [30000, 40000, 50000, 49000, 30000, 0, 0, 0, 0, 0, 0, 0],
       backgroundColor: "#047EDA",
     },
   ],

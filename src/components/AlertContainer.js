@@ -12,6 +12,7 @@ export default function AlertContainer() {
       {/*
        *Black Out
        */}
+
       <div className="inner-wrapper">
         <h6 className="h6 balckout">Blackout</h6>
         <table className="table">
@@ -23,12 +24,12 @@ export default function AlertContainer() {
           <tr className="data">
             <td>Lebuh Keluli</td>
             <td className="centered">7</td>
-            <td>2022/05/25</td>
+            <td>20/06/25 19:10:01</td>
           </tr>
           <tr className="data back-blackout">
             <td>Jalan Ungu U9/28B</td>
             <td className="centered">U9</td>
-            <td>2022/05/23</td>
+            <td>20/06/25 21:17:57</td>
           </tr>
         </table>
       </div>
@@ -45,6 +46,9 @@ export default function AlertContainer() {
             <th className="center-heading">Region</th>
             <th>Time</th>
           </tr>
+          <br />
+          <br />
+          {/*
           <tr className="data">
             <td>Lebuh Keluli</td>
             <td className="centered">7</td>
@@ -55,6 +59,7 @@ export default function AlertContainer() {
             <td className="centered">U9</td>
             <td>2022/05/23</td>
           </tr>
+          */}
         </table>
       </div>
 

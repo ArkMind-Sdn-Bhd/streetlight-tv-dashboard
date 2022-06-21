@@ -35,23 +35,25 @@ const options = {
   },
 };
 
-const labels = ["11/21", "12/21", "01/22", "02/22", "03/22", "04/22", "05/22"];
+const labels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const data = {
   labels,
   datasets: [
     {
-      label: "Daily Usage",
+      label: "Week 1",
       data: [30, 40, 50, 49, 60, 55, 53],
       backgroundColor: "rgb(128,0,128)",
     },
+
+
   ],
 };
 
 export default function TotalConsumptionGraph() {
   return (
     <>
-      <p>Accumulated Total Power Consumption</p>
-      <h3 style={{ textAlign: "right" }}>0 KWh</h3>
+      <h6>Accumulated Total Power Consumption</h6>
+      <h2 style={{ textAlign: "right" }}>122,024 KWh</h2>
       <Bar  height={150} options={options} data={data} />
     </>
   );

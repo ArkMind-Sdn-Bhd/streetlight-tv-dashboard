@@ -23,7 +23,8 @@ function App() {
         <div className="siteWrapper">
           {/*Site Integrated Monitoring System (SIMS)*/}
           <h3 className="siteIntegrate"></h3>
-          <div style={{ marginTop: 30 }}>
+
+          <div style={{ marginTop: 40 }}>
             <h3 className="time">{dateState.toLocaleString()}</h3>
           </div>
         </div>
