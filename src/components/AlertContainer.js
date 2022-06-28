@@ -17,19 +17,15 @@ export default function AlertContainer() {
 				alertList.map((alert, index) => {
 					if (alert.type === "BACKOUT") {
 						setBlackoutList(alert.alerts)
-						console.log(blackoutList)
 					}
 					if (alert.type === "PHASEOUT") {
 						setPhaseoutList(alert.alerts)
-						console.log(phaseoutList)
 					}
 					if (alert.type === "DOOROPEN") {
 						setDoorOpenList(alert.alerts)
-						console.log(doorOpenList)
 					}
 					if (alert.type === "DAYLIGHTON") {
 						setDayLightOnList(alert.alerts)
-						console.log(dayLightOnList)
 					}
 				})
 			})
@@ -39,9 +35,10 @@ export default function AlertContainer() {
 	}
 
 	useEffect(() => {
+		onGetAlertList()
 		setInterval(() => {
 			onGetAlertList()
-		}, 5000)
+		}, 60000)
 	}, []);
 
 
@@ -69,9 +66,9 @@ export default function AlertContainer() {
 						blackoutList.map((details) => {
 							return (
 								<tr className="data">
-									<td>{ details.subsection_name }</td>
-									<td className="centered">{ details.road_name }</td>
-									<td>{ details.subsection_name }</td>
+									<td>{ details.road_name }</td>
+									<td className="centered">{ details.subsection_name.split(" ")[1] }</td>
+									<td>{ details.created_at }</td>
 								</tr>
 							)
 						})
@@ -100,9 +97,9 @@ export default function AlertContainer() {
 						phaseoutList.map((details) => {
 							return (
 								<tr className="data">
-									<td>{ details.subsection_name }</td>
-									<td className="centered">{ details.road_name }</td>
-									<td>{ details.subsection_name }</td>
+									<td>{ details.road_name }</td>
+									<td className="centered">{ details.subsection_name.split(" ")[1] }</td>
+									<td>{ details.created_at }</td>
 								</tr>
 							)
 						})
@@ -143,9 +140,9 @@ export default function AlertContainer() {
 								alert.alerts.map((details) => {
 									return (
 										<tr className="data">
-											<td>{ details.subsection_name }</td>
-											<td className="centered">{ details.road_name }</td>
-											<td>{ details.subsection_name }</td>
+											<td>{ details.road_name }</td>
+											<td className="centered">{ details.subsection_name.split(" ")[1] }</td>
+											<td>{ details.created_at }</td>
 										</tr>
 									)
 								})
@@ -183,9 +180,9 @@ export default function AlertContainer() {
 								alert.alerts.map((details) => {
 									return (
 										<tr className="data">
-											<td>{ details.subsection_name }</td>
-											<td className="centered">{ details.road_name }</td>
-											<td>{ details.subsection_name }</td>
+											<td>{ details.road_name }</td>
+											<td className="centered">{ details.subsection_name.split(" ")[1] }</td>
+											<td>{ details.created_at }</td>
 										</tr>
 									)
 								})
@@ -218,17 +215,15 @@ export default function AlertContainer() {
 					</tr>
 					{
 						alertList.map((alert, index) => {
-							if (alert.type === "DOOROPEN") {
-								alert.alerts.map((details) => {
-									return (
-										<tr className="data">
-											<td>{ details.subsection_name }</td>
-											<td className="centered">{ details.road_name }</td>
-											<td>{ details.subsection_name }</td>
-										</tr>
-									)
-								})
-							}
+							doorOpenList.map((details) => {
+								return (
+									<tr className="data">
+										<td>{ details.road_name }</td>
+										<td className="centered">{ details.subsection_name.split(" ")[1] }</td>
+										<td>{ details.created_at }</td>
+									</tr>
+								)
+							})
 						})
 					}
 					{/*<tr className="data">*/}
@@ -257,18 +252,14 @@ export default function AlertContainer() {
 						<th>Time</th>
 					</tr>
 					{
-						alertList.map((alert, index) => {
-							if (alert.type === "DAYLIGHTON") {
-								alert.alerts.map((details) => {
-									return (
-										<tr className="data">
-											<td>{ details.subsection_name }</td>
-											<td className="centered">{ details.road_name }</td>
-											<td>{ details.subsection_name }</td>
-										</tr>
-									)
-								})
-							}
+						dayLightOnList.map((details) => {
+							return (
+								<tr className="data">
+									<td>{ details.road_name }</td>
+									<td className="centered">{ details.subsection_name.split(" ")[1] }</td>
+									<td>{ details.created_at }</td>
+								</tr>
+							)
 						})
 					}
 					{/*<tr className="data">*/}
