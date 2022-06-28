@@ -41,7 +41,7 @@ export default function AlertContainer() {
 	useEffect(() => {
 		setInterval(() => {
 			onGetAlertList()
-		}, 10000)
+		}, 5000)
 	}, []);
 
 
