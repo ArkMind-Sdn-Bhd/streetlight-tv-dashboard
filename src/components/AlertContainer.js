@@ -13,8 +13,7 @@ export default function AlertContainer() {
 	const onGetAlertList = () => {
 		axios.get(`${process.env.REACT_APP_BASE_URL}/getLatestAlertGroupByAlertCode`)
 			.then((res) => {
-				setAlertList(res.data.alerts);
-				alertList.map((alert, index) => {
+				res.data.alerts.map((alert, index) => {
 					if (alert.type === "BACKOUT") {
 						setBlackoutList(alert.alerts)
 					}
@@ -40,6 +39,11 @@ export default function AlertContainer() {
 			onGetAlertList()
 		}, 60000)
 	}, []);
+
+	useEffect(() => {
+		console.log(blackoutList)
+	}, [blackoutList]);
+
 
 
 	return (
