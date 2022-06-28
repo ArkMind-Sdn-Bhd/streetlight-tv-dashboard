@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Map, { Marker, Popup, Source, Layer } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "mapbox-gl";
+import axios from "axios";
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -234,6 +235,30 @@ const boundaryCordinates = [
 ];
 
 export default function Maps() {
+
+  const [coordsList, setCoordsList] = useState([]);
+
+  const onGetCoords = () => {
+    axios.get(`${process.env.REACT_APP_BASE_URL}/getAllFeederPillarCoordinateAndInfo`)
+        .then((res) => {
+          setCoordsList(res.data.map((coord) => {
+            return {
+              ...coord,
+              line1: coord.road_name,
+              line2: coord.subsection_name,
+              line3: coord.pillar_name,
+              latitude: +coord.long,
+              longitude: +coord.lat,
+            }
+          }));
+        })
+  }
+
+  useEffect(() => {
+    onGetCoords()
+  }, []);
+
+
   /*
    *Intial Cordinates of Map
    */
@@ -243,11 +268,11 @@ export default function Maps() {
     zoom: 12,
   });
 
-  useEffect(() => {
-    setInterval(() => {
-      window.location.reload();
-    }, 600000)
-  }, []);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     window.location.reload();
+  //   }, 600000)
+  // }, []);
   /*
    *Handle State of Popup on CLick
    */
@@ -303,7 +328,7 @@ export default function Maps() {
           {/*
            *Render all the pointers/markers
            */}
-          {CITIES.map(({ latitude, longitude, line1, line2, line3 }, index) => (
+          {coordsList.map(({ latitude, longitude, line1, line2, line3 }, index) => (
             <Marker
               key={index}
               anchor="bottom"
