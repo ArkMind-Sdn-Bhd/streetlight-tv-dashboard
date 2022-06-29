@@ -2,9 +2,8 @@ import React, {useEffect} from "react";
 import axios from "axios";
 import {useState} from "react";
 
-export default function AlertContainer() {
+export default function AlertContainer({ alertList, setAlertList }) {
 
-	const [alertList, setAlertList] = useState([]);
 	const [blackoutList, setBlackoutList] = useState([]);
 	const [phaseoutList, setPhaseoutList] = useState([]);
 	const [doorOpenList, setDoorOpenList] = useState([]);
@@ -13,6 +12,7 @@ export default function AlertContainer() {
 	const onGetAlertList = () => {
 		axios.get(`${process.env.REACT_APP_BASE_URL}/getLatestAlertGroupByAlertCode`)
 			.then((res) => {
+				let arrayList = []
 				res.data.alerts.map((alert, index) => {
 					if (alert.type === "BACKOUT") {
 						setBlackoutList(alert.alerts)
@@ -26,6 +26,13 @@ export default function AlertContainer() {
 					if (alert.type === "DAYLIGHTON") {
 						setDayLightOnList(alert.alerts)
 					}
+
+					let uniqueArray = [...new Set(arrayList)];
+
+					console.log("UNIQUE", uniqueArray, arrayList)
+
+					setAlertList(uniqueArray)
+
 				})
 			})
 			.catch((error) => {
@@ -41,8 +48,21 @@ export default function AlertContainer() {
 	}, []);
 
 	useEffect(() => {
-		console.log(blackoutList)
-	}, [blackoutList]);
+		let arrayList = []
+		blackoutList.map((details, index) => {
+			arrayList.push(details.pillar_id)
+		})
+		phaseoutList.map((details, index) => {
+			arrayList.push(details.pillar_id)
+		})
+		doorOpenList.map((details, index) => {
+			arrayList.push(details.pillar_id)
+		})
+		dayLightOnList.map((details, index) => {
+			arrayList.push(details.pillar_id)
+		})
+		setAlertList(arrayList)
+	}, [blackoutList, phaseoutList, doorOpenList, dayLightOnList]);
 
 	return (
 		<div className="alertContainer">

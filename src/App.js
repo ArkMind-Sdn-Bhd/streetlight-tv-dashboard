@@ -6,9 +6,16 @@ import AlertContainer from "./components/AlertContainer";
 
 function App() {
   const [dateState, setDateState] = useState(new Date());
+
+  const [alertList, setAlertList] = useState([]);
+
   useEffect(() => {
     setInterval(() => setDateState(new Date()), 1000);
   }, []);
+
+  useEffect(() => {
+    console.log("LII", alertList)
+  }, [alertList]);
 
   return (
     <div className="container">
@@ -34,8 +41,8 @@ function App() {
        */}
       <div className="wrapper">
         <GraphContainer />
-        <Maps />
-        <AlertContainer />
+        <Maps alertList={alertList} setAlertList={setAlertList} />
+        <AlertContainer alertList={alertList} setAlertList={setAlertList} />
       </div>
     </div>
   );
