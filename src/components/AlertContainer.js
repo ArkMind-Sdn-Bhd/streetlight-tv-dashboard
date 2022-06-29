@@ -44,8 +44,6 @@ export default function AlertContainer() {
 		console.log(blackoutList)
 	}, [blackoutList]);
 
-
-
 	return (
 		<div className="alertContainer">
 			{/*<h5 className="alert">Alert</h5>*/}
@@ -218,16 +216,14 @@ export default function AlertContainer() {
 						<th>Time</th>
 					</tr>
 					{
-						alertList.map((alert, index) => {
-							doorOpenList.map((details) => {
-								return (
-									<tr className="data">
-										<td>{ details.road_name }</td>
-										<td className="centered">{ details.subsection_name.split(" ")[1] }</td>
-										<td>{ details.created_at }</td>
-									</tr>
-								)
-							})
+						doorOpenList.map((details) => {
+							return (
+								<tr className="data">
+									<td>{ details.road_name }</td>
+									<td className="centered">{ details.subsection_name.split(" ")[1] }</td>
+									<td>{ details.created_at }</td>
+								</tr>
+							)
 						})
 					}
 					{/*<tr className="data">*/}
